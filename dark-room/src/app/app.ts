@@ -13,5 +13,5 @@ import { MatIconModule } from '@angular/material/icon';
   imports: [MatToolbarModule, MatButtonModule, MatIconModule, RouterOutlet],
 })
 export class App {
-  protected readonly title = signal('dark-room');
+  protected readonly title = signal('Dark Room');
 }

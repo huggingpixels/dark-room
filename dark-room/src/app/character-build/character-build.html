@@ -1,4 +1,19 @@
-<div>
-    <h2>Job Application for Heroes</h2>
-    <app-dynamic-form [questions]="questions$ | async" />
-</div>
+<mat-stepper orientation="vertical" [linear]="false" #stepper>
+    <!-- <mat-step [stepControl]="form()"> -->
+    <mat-step>
+        <ng-template matStepLabel>Identity</ng-template>
+        <app-dynamic-form [questions]="identityQuestions$ | async" />
+    </mat-step>
+    <mat-step>
+        <ng-template matStepLabel>Physical Clues</ng-template>
+        <app-dynamic-form [questions]="physicalCluesQuestions$ | async" />
+    </mat-step>
+    <mat-step>
+        <ng-template matStepLabel>Behavior</ng-template>
+        <app-dynamic-form [questions]="behaviorProfileQuestions$ | async" />
+    </mat-step>
+    <mat-step>
+        <ng-template matStepLabel>Secret History</ng-template>
+        <app-dynamic-form [questions]="secretHistoryQuestions$ | async" />
+    </mat-step>
+</mat-stepper>

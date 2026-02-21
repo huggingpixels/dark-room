@@ -4,13 +4,12 @@
       @switch (question().controlType) {
         @case ('textbox') {
           <mat-form-field>
-            <mat-label>{{ question().key }}</mat-label>
             <input matInput [formControlName]="question().key" [id]="question().key" [type]="question().type">
           </mat-form-field>
         }
         @case ('dropdown') {
             <mat-form-field>
-                <mat-label>Select</mat-label>
+                <mat-label>select</mat-label>
                 <mat-select [id]="question().key" [formControlName]="question().key">
                     @for (opt of question().options; track opt) {
                         <mat-option [value]="opt.key">{{ opt.value }}</mat-option>

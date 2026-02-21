@@ -3,14 +3,12 @@ import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { QuestionControlService } from '../dynamic-form-question/question-control.service';
 import { DynamicFormQuestionComponent } from '../dynamic-form-question/dynamic-form-question';
 import { QuestionBase } from '../dynamic-form-question/question-base';
-import { MatStepperModule } from '@angular/material/stepper';
-import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-dynamic-form',
   templateUrl: './dynamic-form.html',
   providers: [QuestionControlService],
-  imports: [DynamicFormQuestionComponent, ReactiveFormsModule, MatStepperModule, MatButtonModule],
+  imports: [DynamicFormQuestionComponent, ReactiveFormsModule],
 })
 export class DynamicFormComponent {
   private readonly qcs = inject(QuestionControlService);
